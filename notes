@@ -1,0 +1,58 @@
+when we want to create a circle picture:
+child: Container(
+          width: 30,
+          height: 30,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(50),
+            child: Image.asset(
+              'images/yashar.jpg',
+              fit: BoxFit.cover,
+            ),
+          ),
+        )
+
+----------------------------------------------------------------------------------------------------
+creating a menu like list:
+SizedBox(
+    height: 75,
+    width: double.infinity,
+
+    child: ListView.builder(
+        itemCount: 2, //The repetetion of items
+        scrollDirection: Axis.horizontal,
+        physics: const BouncingScrollPhysics(),
+        itemBuilder: (context, index) {
+          return Widget;
+          }
+      ),
+
+  )
+----------------------------------------------------------------------------------------------------
+SizedBox(
+    height: 75,
+    width: double.infinity,
+
+    child: ListView(
+        scrollDirection: Axis.horizontal,
+        physics: const BouncingScrollPhysics(),
+        children:[
+            widget1,
+            widget2,
+            widget3
+        ]
+      ),
+
+  )
+----------------------------------------------------------------------------------------------------
+By default, ClipRect prevents its child from painting outside its bounds:
+ClipRRect(
+    borderRadius: BorderRadius.circular(50),
+    child: Image.asset(
+      'images/zahra.png',
+      fit: BoxFit.cover,
+    ),
+  ),
+----------------------------------------------------------------------------------------------------
+AppBar---> leading:     actions:
+----------------------------------------------------------------------------------------------------
+for making our ui to be scrollable we can put the body of the scaffoild in => SingleChildScrollView
